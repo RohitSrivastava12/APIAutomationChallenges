@@ -18,7 +18,7 @@ public class TestCase {
 		String response = GetCourseDetails();
 		JsonPath js = new JsonPath(response);
 		// access_token = js.getString("access_token");
-		if(js.getString("courses.webAutomation[1].price").equals("4")) {
+		if(js.getString("courses.webAutomation[1].price").equals("40")) {
 			System.out.println("Pass");
 		}
 		else {
@@ -30,7 +30,8 @@ public class TestCase {
 	public static String GetCourseDetails() {
 		String Get_Url = baseUrl + "getCourseDetails";
 		access_token = GetAccessToken();
-		String response = given().queryParams("access_token", access_token).when().get(Get_Url).asString();
+		String response = given().queryParams("access_token", access_token)
+				.when().log().all().get(Get_Url).asString();
 		System.out.println(response);
 		return response;
 	}

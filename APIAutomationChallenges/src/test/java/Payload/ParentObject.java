@@ -5,7 +5,7 @@ public class ParentObject {
 	private String services;
 	private String expertise;
 	private CoursesObject courses;
-	private String linkedin;
+	private String linkedIn;
 	private String instructor;
 
 	public String getInstructor() {
@@ -49,10 +49,10 @@ public class ParentObject {
 	}
 
 	public String getLinkedin() {
-		return linkedin;
+		return linkedIn;
 	}
 
-	public void setLinkedin(String linkedin) {
-		this.linkedin = linkedin;
+	public void setLinkedin(String linkedIn) {
+		this.linkedIn = linkedIn;
 	}
 }
